@@ -22,28 +22,53 @@ namespace HomeWork
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// обработчик вкладки Play
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Action_Menu.Play();
         }
         /// <summary>
-        /// Обработчик кнопки +1
+        /// обработчик вкладки Restart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiRestart_Click(object sender, EventArgs e)
+        {
+            Action_Menu.Restart();
+        }
+
+
+        /// <summary>
+        /// обработчик кнопки +1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            lblCount.Text = Action_btn.Plus(lblCount.Text);
+            Action_btn.Plus();
         }
         /// <summary>
-        /// Обработчик кнопки *2
+        /// обработчик кнопки *2
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnMult_Click(object sender, EventArgs e)
         {
-            lblCount.Text = Action_btn.Multi(lblCount.Text);
+            Action_btn.Multi();
         }
+        /// <summary>
+        /// обработчик кнопки Reset
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Action_btn.Reset();
+        }
+
     }
 }

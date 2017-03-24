@@ -32,13 +32,17 @@
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPlay = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRestart = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelLastMove = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblCount = new System.Windows.Forms.Label();
+            lblCount = new System.Windows.Forms.Label();
             this.btnPlus = new System.Windows.Forms.Button();
             this.btnMult = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.lblText = new System.Windows.Forms.Label();
+            lblTurns = new System.Windows.Forms.Label();
+            this.lblText1 = new System.Windows.Forms.Label();
+            lblValue = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +79,13 @@
             this.tsmiRestart.Name = "tsmiRestart";
             this.tsmiRestart.Size = new System.Drawing.Size(152, 22);
             this.tsmiRestart.Text = "Restart";
+            this.tsmiRestart.Click += new System.EventHandler(this.tsmiRestart_Click);
+            // 
+            // tsmiExit
+            // 
+            this.tsmiExit.Name = "tsmiExit";
+            this.tsmiExit.Size = new System.Drawing.Size(152, 22);
+            this.tsmiExit.Text = "Exit";
             // 
             // settingsToolStripMenuItem
             // 
@@ -90,21 +101,15 @@
             this.tsmiCancelLastMove.Size = new System.Drawing.Size(167, 22);
             this.tsmiCancelLastMove.Text = "Cancel Last Move";
             // 
-            // tsmiExit
-            // 
-            this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(152, 22);
-            this.tsmiExit.Text = "Exit";
-            // 
             // lblCount
             // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCount.Location = new System.Drawing.Point(125, 68);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(27, 29);
-            this.lblCount.TabIndex = 1;
-            this.lblCount.Text = "1";
+            lblCount.AutoSize = true;
+            lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            lblCount.Location = new System.Drawing.Point(125, 68);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new System.Drawing.Size(27, 29);
+            lblCount.TabIndex = 1;
+            lblCount.Text = "1";
             // 
             // btnPlus
             // 
@@ -137,16 +142,61 @@
             this.btnReset.TabIndex = 4;
             this.btnReset.Text = "reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // lblText
+            // 
+            this.lblText.AutoSize = true;
+            this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblText.Location = new System.Drawing.Point(204, 37);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(53, 20);
+            this.lblText.TabIndex = 5;
+            this.lblText.Text = "Turns:";
+            // 
+            // lblTurns
+            // 
+            lblTurns.AutoSize = true;
+            lblTurns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            lblTurns.Location = new System.Drawing.Point(257, 37);
+            lblTurns.Name = "lblTurns";
+            lblTurns.Size = new System.Drawing.Size(18, 20);
+            lblTurns.TabIndex = 6;
+            lblTurns.Text = "0";
+            // 
+            // lblText1
+            // 
+            this.lblText1.AutoSize = true;
+            this.lblText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblText1.Location = new System.Drawing.Point(13, 37);
+            this.lblText1.Name = "lblText1";
+            this.lblText1.Size = new System.Drawing.Size(54, 20);
+            this.lblText1.TabIndex = 7;
+            this.lblText1.Text = "Value:";
+            // 
+            // lblValue
+            // 
+            lblValue.AutoSize = true;
+            lblValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            lblValue.Location = new System.Drawing.Point(62, 37);
+            lblValue.Name = "lblValue";
+            lblValue.Size = new System.Drawing.Size(36, 20);
+            lblValue.TabIndex = 8;
+            lblValue.Text = "100";
             // 
             // fmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 202);
+            this.Controls.Add(lblValue);
+            this.Controls.Add(this.lblText1);
+            this.Controls.Add(lblTurns);
+            this.Controls.Add(this.lblText);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnMult);
             this.Controls.Add(this.btnPlus);
-            this.Controls.Add(this.lblCount);
+            this.Controls.Add(lblCount);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fmMain";
@@ -167,10 +217,14 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiExit;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiCancelLastMove;
-        private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Button btnPlus;
         private System.Windows.Forms.Button btnMult;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Label lblText;
+        private System.Windows.Forms.Label lblText1;
+        public static System.Windows.Forms.Label lblCount;
+        public static System.Windows.Forms.Label lblTurns;
+        public static System.Windows.Forms.Label lblValue;
     }
 }
 

@@ -7,18 +7,34 @@ using System.Threading.Tasks;
 namespace HomeWork
 {
     /// <summary>
-    /// Класс сложения
+    /// класс обработчик кнопок
     /// </summary>
-    class Action_btn
+    class Action_btn : fmMain
     {
         /// <summary>
         /// метод сложения
         /// </summary>
-        /// <param name="count">текущий счет, как аргумент</param>
-        /// <returns>текущий счет + 1</returns>
-        public static string Plus (string count)
+        public static void Plus ()
         {
-            return count = (1 + Convert.ToInt32(count)).ToString();
+            lblTurns.Text = (1 + Convert.ToInt32(lblTurns.Text)).ToString();
+            lblCount.Text = (1 + Convert.ToInt32(lblCount.Text)).ToString();
         }
+        /// <summary>
+        /// метод умножения
+        /// </summary>
+        public static void Multi()
+        {
+            lblTurns.Text = (1 + Convert.ToInt32(lblTurns.Text)).ToString();
+            lblCount.Text = (Convert.ToInt32(lblCount.Text) * 2).ToString();
+        }
+        /// <summary>
+        ///  метод сброса
+        /// </summary>
+        public static void Reset()
+        {
+            lblTurns.Text = (1 + Convert.ToInt32(lblTurns.Text)).ToString();
+            lblCount.Text = "1";
+        }
+
     }
 }
