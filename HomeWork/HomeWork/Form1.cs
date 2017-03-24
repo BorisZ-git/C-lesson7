@@ -69,6 +69,14 @@ namespace HomeWork
         {
             Action_btn.Reset();
         }
-
+        /// <summary>
+        /// обработчик вкладки Exit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
