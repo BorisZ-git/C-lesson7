@@ -100,11 +100,11 @@
             // 
             this.lblCount.AutoSize = true;
             this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCount.Location = new System.Drawing.Point(123, 73);
+            this.lblCount.Location = new System.Drawing.Point(125, 68);
             this.lblCount.Name = "lblCount";
             this.lblCount.Size = new System.Drawing.Size(27, 29);
             this.lblCount.TabIndex = 1;
-            this.lblCount.Text = "0";
+            this.lblCount.Text = "1";
             // 
             // btnPlus
             // 
@@ -113,8 +113,9 @@
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(75, 39);
             this.btnPlus.TabIndex = 2;
-            this.btnPlus.Text = "+";
+            this.btnPlus.Text = "+1";
             this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // btnMult
             // 
@@ -123,7 +124,7 @@
             this.btnMult.Name = "btnMult";
             this.btnMult.Size = new System.Drawing.Size(75, 39);
             this.btnMult.TabIndex = 3;
-            this.btnMult.Text = "*";
+            this.btnMult.Text = "*2";
             this.btnMult.UseVisualStyleBackColor = true;
             // 
             // btnReset

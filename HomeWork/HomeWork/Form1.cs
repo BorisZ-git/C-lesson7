@@ -25,7 +25,16 @@ namespace HomeWork
 
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
+        }
+        /// <summary>
+        /// Обработчик кнопки +1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            lblCount.Text = Plus.Init(lblCount.Text);
         }
     }
 }
