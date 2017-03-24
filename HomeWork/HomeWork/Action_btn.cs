@@ -9,14 +9,14 @@ namespace HomeWork
     /// <summary>
     /// Класс сложения
     /// </summary>
-    class Plus
+    class Action_btn
     {
         /// <summary>
         /// метод сложения
         /// </summary>
         /// <param name="count">текущий счет, как аргумент</param>
         /// <returns>текущий счет + 1</returns>
-        public static string Init (string count)
+        public static string Plus (string count)
         {
             return count = (1 + Convert.ToInt32(count)).ToString();
         }

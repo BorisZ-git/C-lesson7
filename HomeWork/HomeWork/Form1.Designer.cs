@@ -126,6 +126,7 @@
             this.btnMult.TabIndex = 3;
             this.btnMult.Text = "*2";
             this.btnMult.UseVisualStyleBackColor = true;
+            this.btnMult.Click += new System.EventHandler(this.btnMult_Click);
             // 
             // btnReset
             // 
