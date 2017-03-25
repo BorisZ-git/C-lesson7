@@ -17,16 +17,38 @@ namespace HomeWork3
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Открывает форму
+        /// </summary>
+        /// <param name="ToName">ОтИмя</param>
+        /// <param name="ToLastName">ОтФамилия</param>
+        /// <param name="FromName">КомуИмя</param>
+        /// <param name="FromLastName">КомуФамилия</param>
+        /// <param name="dtFrom">СКакого</param>
+        /// <param name="dtTo">ПоКакое</param>
+        /// <param name="dtTime">Дата</param>
+        /// <param name="Sign">Роспись</param>
         public static void fmShow(string ToName, string ToLastName,
             string FromName, string FromLastName, string dtFrom, string dtTo,
             string dtTime, string Sign)
         {
-            Form2 fm2 = new Form2();
+            Form2 fm2 = new Form2();            
             fm2.fmFull(ToName, ToLastName, FromName, FromLastName,
                 dtFrom, dtTo, dtTime, Sign);
             fm2.ShowDialog();
             
         }
+        /// <summary>
+        /// заполняет значения в форме
+        /// </summary>
+        /// <param name="ToName">ОтИмя</param>
+        /// <param name="ToLastName">ОтФамилия</param>
+        /// <param name="FromName">КомуИмя</param>
+        /// <param name="FromLastName">КомуФамилия</param>
+        /// <param name="dtFrom">СКакого</param>
+        /// <param name="dtTo">ПоКакое</param>
+        /// <param name="dtTime">Дата</param>
+        /// <param name="Sign">Роспись</param>
         private void fmFull(string ToName, string ToLastName,
             string FromName, string FromLastName, string dtFrom, string dtTo,
             string dtTime, string Sign)
