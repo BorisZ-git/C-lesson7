@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+
+
 /* Boris Z
  * Котик в лабиринте:
  * Есть точка начала(котик)
@@ -18,6 +21,10 @@ namespace CatInLabirinth
     {
         static void Main(string[] args)
         {
+            Ramka squad = new Ramka();
+            Console.ReadLine();
+            
+            
         }
     }
 }
