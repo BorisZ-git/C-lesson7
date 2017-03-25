@@ -78,5 +78,14 @@ namespace HomeWork
         {
             Close();
         }
+        /// <summary>
+        /// обработчик вкладки Cancel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiCancelLastMove_Click(object sender, EventArgs e)
+        {
+            Action_Menu.Cancel(lblLast_Action.Text);
+        }
     }
 }

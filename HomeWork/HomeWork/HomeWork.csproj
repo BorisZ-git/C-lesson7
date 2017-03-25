@@ -59,6 +59,9 @@
     <Compile Include="Action_btn.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LastAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

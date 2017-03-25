@@ -19,8 +19,8 @@ namespace HomeWork
         {
             Random r = new Random();
             lblValue.Text = (r.Next(50, 100)).ToString();
-            lblTurns.Text = "0";
-            lblCount.Text = "1";
+            LastAction.Reset();
+            LastAction.LoadLast();
             //MessageBox.Show(value);
         }
         /// <summary>
@@ -28,8 +28,17 @@ namespace HomeWork
         /// </summary>
         public static void Restart()
         {
-            lblTurns.Text = "0";
-            lblCount.Text = "1";
+            LastAction.Reset();
+            LastAction.LoadLast();
+        }
+        /// <summary>
+        /// отменяет последний ход
+        /// </summary>
+        /// <param name="last_action">аргумент определяющий было ли действие</param>
+        public static void Cancel(string last_action)
+        {
+            if (last_action == "full")
+                LastAction.LoadLast();
         }
 
     }
