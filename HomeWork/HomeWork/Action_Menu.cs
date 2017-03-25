@@ -40,6 +40,13 @@ namespace HomeWork
             if (last_action == "full")
                 LastAction.LoadLast();
         }
+        /// <summary>
+        /// выводит правила на экран
+        /// </summary>
+        public static void Rule()
+        {
+            MessageBox.Show("rule of game", "Rules");
+        }
 
     }
 }

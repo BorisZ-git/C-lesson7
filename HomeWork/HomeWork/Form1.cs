@@ -87,5 +87,14 @@ namespace HomeWork
         {
             Action_Menu.Cancel(lblLast_Action.Text);
         }
+        /// <summary>
+        /// обработчик вкладки Rule
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ruleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Action_Menu.Rule();
+        }
     }
 }

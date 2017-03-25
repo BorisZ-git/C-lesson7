@@ -49,7 +49,6 @@
     <Compile Include="Action_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="btnPlayAction.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

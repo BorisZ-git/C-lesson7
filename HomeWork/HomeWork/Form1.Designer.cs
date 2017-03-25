@@ -44,6 +44,8 @@
             this.lblText1 = new System.Windows.Forms.Label();
             lblValue = new System.Windows.Forms.Label();
             lblLast_Action = new System.Windows.Forms.Label();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ruleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gameToolStripMenuItem,
-            this.settingsToolStripMenuItem});
+            this.settingsToolStripMenuItem,
+            this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(284, 24);
@@ -71,6 +74,7 @@
             // tsmiPlay
             // 
             this.tsmiPlay.Name = "tsmiPlay";
+            this.tsmiPlay.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.tsmiPlay.Size = new System.Drawing.Size(152, 22);
             this.tsmiPlay.Text = "Play";
             this.tsmiPlay.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
@@ -78,6 +82,7 @@
             // tsmiRestart
             // 
             this.tsmiRestart.Name = "tsmiRestart";
+            this.tsmiRestart.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.tsmiRestart.Size = new System.Drawing.Size(152, 22);
             this.tsmiRestart.Text = "Restart";
             this.tsmiRestart.Click += new System.EventHandler(this.tsmiRestart_Click);
@@ -85,6 +90,7 @@
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
+            this.tsmiExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.tsmiExit.Size = new System.Drawing.Size(152, 22);
             this.tsmiExit.Text = "Exit";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
@@ -100,7 +106,8 @@
             // tsmiCancelLastMove
             // 
             this.tsmiCancelLastMove.Name = "tsmiCancelLastMove";
-            this.tsmiCancelLastMove.Size = new System.Drawing.Size(167, 22);
+            this.tsmiCancelLastMove.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.tsmiCancelLastMove.Size = new System.Drawing.Size(208, 22);
             this.tsmiCancelLastMove.Text = "Cancel Last Move";
             this.tsmiCancelLastMove.Click += new System.EventHandler(this.tsmiCancelLastMove_Click);
             // 
@@ -197,6 +204,21 @@
             lblLast_Action.Text = "null";
             lblLast_Action.Visible = false;
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ruleToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // ruleToolStripMenuItem
+            // 
+            this.ruleToolStripMenuItem.Name = "ruleToolStripMenuItem";
+            this.ruleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ruleToolStripMenuItem.Text = "Rule";
+            this.ruleToolStripMenuItem.Click += new System.EventHandler(this.ruleToolStripMenuItem_Click);
+            // 
             // fmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +258,8 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.Label lblText1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ruleToolStripMenuItem;
         public static System.Windows.Forms.Label lblCount;
         public static System.Windows.Forms.Label lblTurns;
         public static System.Windows.Forms.Label lblValue;
