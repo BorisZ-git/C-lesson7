@@ -20,5 +20,10 @@ namespace HomeWork3
         {
             InitializeComponent();
         }
+
+        private void btnDoIt_Click(object sender, EventArgs e)
+        {
+            Form2.fmShow();         
+        }
     }
 }
