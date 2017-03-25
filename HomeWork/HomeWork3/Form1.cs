@@ -20,10 +20,13 @@ namespace HomeWork3
         {
             InitializeComponent();
         }
-
+        
         private void btnDoIt_Click(object sender, EventArgs e)
         {
-            Form2.fmShow();         
+            Form2.fmShow(txbToName.Text,txbToLastName.Text,
+                txbFromName.Text,txbFromLastName.Text,
+                dtFrom.Text,dtTo.Text,dtTime.Text,txbSign.Text);     
+            
         }
     }
 }
