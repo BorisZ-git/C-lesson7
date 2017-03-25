@@ -15,12 +15,30 @@ using System.Windows.Forms;
 
 namespace HomeWork2
 {
-    public partial class Form1 : Form
+    public partial class fmMain : Form
     {
-        public Form1()
+        public fmMain()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Обработчик для кнопки Make a Number
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnNumber_Click(object sender, EventArgs e)
+        {
+            lblTurn.Text = Number.MaNumber();
+        }
+        /// <summary>
+        /// Обработчик кнопки Answer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAnswer_Click(object sender, EventArgs e)
+        {
+            Number.CheckAnswer(txbAnswer.Text);
+            lblTurn.Text = (Convert.ToInt32(lblTurn.Text) + 1).ToString();
+        }
     }
 }
